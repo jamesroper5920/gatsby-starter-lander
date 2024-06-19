@@ -6,18 +6,28 @@ const sizes = {
   xl: `py-5 px-16 text-lg`
 };
 
-const Button = ({ children, className = '', size }) => {
+const Button = ({ children, className = '', size, href }) => {
+  const commonClasses = `
+    ${sizes[size] || sizes.default}
+    ${className}
+    bg-primary
+    hover:bg-primary-darker
+    rounded
+    text-white
+  `;
+
+  if (href) {
+    return (
+      <a href={href} className={`${commonClasses} btn-link`}>
+        {children}
+      </a>
+    );
+  }
+
   return (
     <button
       type="button"
-      className={`
-        ${sizes[size] || sizes.default}
-        ${className}
-        bg-primary
-        hover:bg-primary-darker
-        rounded
-        text-white
-    `}
+      className={commonClasses}
     >
       {children}
     </button>

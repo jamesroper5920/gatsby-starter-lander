@@ -1,12 +1,25 @@
 @tailwind base;
 
+/* Override default link styles */
 a {
-  @apply text-primary;
+  @apply no-underline;
 }
 a:hover {
-  @apply text-primary-darker;
+  @apply no-underline;
+}
+
+/* Ensure button links maintain text color */
+.btn-link {
+  @apply text-white;
+}
+.btn-link:hover {
+  @apply text-white;
 }
 
 @tailwind components;
-
 @tailwind utilities;
+
+/* Prevent horizontal scrolling */
+body {
+  overflow-x: hidden;
+}

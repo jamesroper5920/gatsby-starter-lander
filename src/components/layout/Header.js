@@ -1,6 +1,6 @@
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import LogoIcon from '../../svg/LogoIcon';
+import logo from '../../images/fileologo.png';
 import Button from '../Button';
 
 const Header = () => (
@@ -8,9 +8,9 @@ const Header = () => (
     <div className="container flex flex-col sm:flex-row justify-between items-center mx-auto py-4 px-8">
       <div className="flex items-center text-2xl">
         <div className="w-12 mr-3">
-          <LogoIcon />
+          <img src={logo} alt="Fileo Logo" className="w-full" />
         </div>
-        Lander
+        Fileo
       </div>
       <div className="flex mt-4 sm:mt-0">
         <AnchorLink className="px-4" href="#features">
@@ -27,7 +27,7 @@ const Header = () => (
         </AnchorLink>
       </div>
       <div className="hidden md:block">
-        <Button className="text-sm">Start Free Trial</Button>
+        <Button className="text-sm" href="https://app.fileo.co.uk">Log In</Button>
       </div>
     </div>
   </header>

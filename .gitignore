@@ -40,7 +40,7 @@ node_modules/
 jspm_packages/
 package.lock
 
-# Typescript v1 declaration files
+# Typescript v1 declaration filesac
 typings/
 
 # Optional npm cache directory
